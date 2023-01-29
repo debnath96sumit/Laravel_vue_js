@@ -68,7 +68,7 @@
     const login = async()=>{
         await axios.post('/api/login', form)
         .then(response =>{
-            console.log(response);
+            // console.log(response);
             if (response.data.success) {
                 localStorage.setItem('token', response.data.data.token)
                 router.push('/admin/home');
